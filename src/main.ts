@@ -9,19 +9,34 @@
 // const t = clock.getTime()
 // console.log(t)
 
-// const { spawn } = require('child_process');
-const spawn = require('cross-spawn');
+const { spawn } = require('child_process');
+// const spawn = require('cross-spawn');
 // const cmd = spawn('ls', ['-lh', '/usr']);
-const cmd = spawn('git', ['add', '.'])
+const add = spawn('git', ['add', '.'])
+const commit = spawn('git', ['commit', '-m', 'haha'])
+execGit(commit);
+// commit.stdout.on('data', (data) => {
+//   console.log(`add stdout: ${data}`);
+// });
 
-cmd.stdout.on('data', (data) => {
-  console.log(`stdout: ${data}`);
-});
+// commit.stderr.on('data', (data) => {
+//   console.log(`add stderr: ${data}`);
+// });
 
-cmd.stderr.on('data', (data) => {
-  console.log(`stderr: ${data}`);
-});
+// commit.on('close', (code) => {
+//   console.log(`add子进程退出码：${code}`);
+// });
 
-cmd.on('close', (code) => {
-  console.log(`子进程退出码：${code}`);
-});
+function execGit(cmd) {
+    cmd.stdout.on('data', (data) => {
+        console.log(`stdout: ${data}`);
+    });
+    
+    cmd.stderr.on('data', (data) => {
+        console.log(`stderr: ${data}`);
+    });
+    
+    cmd.on('close', (code) => {
+        console.log(`子进程退出码：${code}`);
+    });
+}

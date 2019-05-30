@@ -8,11 +8,11 @@
             "type": "node",
             "request": "launch",
             "name": "启动程序",
-            "program": "${workspaceRoot}\\src\\main.ts",
+            "program": "${workspaceRoot}/src/main.ts",
             "args": [],
             "cwd": "${workspaceRoot}",
             "protocol": "inspector",
-            "outFiles": ["${workspaceRoot}\\dist\\main.js"]
+            "outFiles": ["${workspaceRoot}/dist/main.js"]
         }
     ]
 }

@@ -1,4 +1,5 @@
 // import { Son, Api, Clock, Employee } from './base'
+import { AAA } from './base'
 
 // const son = new Son('Mike', 28)
 // son.say('Hello')
@@ -31,3 +32,7 @@ function execGit(cmd, cmdName) {
         console.log(`${cmdName} 子进程退出码：${code}`);
     });
 }
+
+const aaa = new AAA();
+
+console.log(aaa.test())

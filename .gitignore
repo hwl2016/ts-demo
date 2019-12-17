@@ -9,6 +9,9 @@ target/
 .project
 .classpath
 
+.vscode
+.history
+
 # idea ignore
 .idea/
 *.ipr

@@ -5,7 +5,9 @@
         "module": "commonjs",
         "removeComments": true,
         "sourceMap": true,
-        "outDir": "./dist"
+        "outDir": "./dist/ts",
+        "jsx": "preserve",
+        "experimentalDecorators": true
     },
     "include":[
         "src/**/*"

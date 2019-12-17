@@ -5,15 +5,24 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node src/main.ts",
+    "start": "ts-node src/ts/main.ts",
     "start:dev": "nodemon",
-    "serve": "node dist/main.js",
-    "test": "tsc && node dist/main.js"
+    "serve": "node dist/ts/main.js",
+    "babelCompile": "babel src/es6/index.js -o dist/es6/index.js",
+    "ts": "tsc && node dist/ts/main.js",
+    "es6": "node src/es6/index.js"
   },
   "author": "huwl",
   "license": "ISC",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "nodemon": "^1.19.0",
     "ts-node": "^8.1.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0"
   }
 }

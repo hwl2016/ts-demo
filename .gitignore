@@ -9,8 +9,8 @@ target/
 .project
 .classpath
 
-.vscode/
-.history/
+.vscode
+.history
 
 # idea ignore
 .idea/

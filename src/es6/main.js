@@ -1,4 +1,5 @@
 import { mixin, readonly, log } from "./mixin";
+import { fibonacci, objectEntries } from "./generator";
 
 const Foo = {
     foo() {
@@ -26,6 +27,16 @@ class C {
     }
 }
 
-var c = new C("wenlong", "hu");
-c.method(1);
-c.foo();
+// var c = new C("wenlong", "hu");
+// c.method(1);
+// c.foo();
+
+// for(const i of fibonacci()) {
+//     if(i > 1000) break;
+//     console.log(i);
+// }
+
+const obj = { first: 'Jane', last: 'Doe' };
+for (const [key, value] of objectEntries(obj)) {
+  console.log(`${key}: ${value}`);
+}

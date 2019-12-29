@@ -16,10 +16,12 @@
   "license": "ISC",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "co": "^4.6.0",
     "nodemon": "^1.19.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-pullload": "^1.2.0",
+    "thunkify": "^2.1.2",
     "ts-node": "^8.1.1"
   },
   "devDependencies": {
